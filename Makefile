@@ -24,9 +24,9 @@ config:
 
 bin:
 	@echo "Creating run script and place in /usr/local/bin..."
-	echo "#!/bin/bash\nsource $(PWD)/venv/bin/activate\npython $(PWD)/app.py > $(PWD)/shellquick.log 2>&1 2>/dev/null &" > shellquick_run_no_warnings.sh
-	chmod +x shellquick_run_no_warnings.sh
-	sudo cp shellquick_run_no_warnings.sh $(RUN_SCRIPT)
+	echo "#!/bin/bash\nsource $(PWD)/venv/bin/activate\npython $(PWD)/app.py 2>&1 2>/dev/null &" > shellquick_run.sh
+	chmod +x shellquick_run.sh
+	sudo cp shellquick_run.sh $(RUN_SCRIPT)
 
 uninstall:
 	@echo "Stopping and unloading the ShellQuick service..."
