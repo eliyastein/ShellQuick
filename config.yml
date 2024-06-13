@@ -1,0 +1,8 @@
+shortcuts:
+  - label: "This is a menu item"
+    command: osascript -e 'tell app "System Events" to display dialog "Hello World"'
+  - label: "This is a collection of menu items"
+    submenu:
+      - label: "This is a submenu item"
+        command: osascript -e 'tell app "System Events" to display dialog "Hello World"'
+
